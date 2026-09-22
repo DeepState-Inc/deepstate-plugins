@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-09-22T18:20:20.038Z",
+  "plugins": {
+    "claude": {
+      "version": "1.0.0",
+      "minApp": "1.2.0",
+      "providers": [
+        "claude"
+      ],
+      "path": "providers/claude",
+      "files": {
+        "manifest.json": "7535f5fcfeb01782cc9cc1c5afd2ddcf53337977f1495bc7a79f78b39f28ed5b",
+        "index.js": "aec55b71bbc5bd8616628590f1e02aa459400356e9741f63ca4386d7152877f4"
+      }
+    },
+    "openai": {
+      "version": "1.0.0",
+      "minApp": "1.2.0",
+      "providers": [
+        "openai"
+      ],
+      "path": "providers/openai",
+      "files": {
+        "manifest.json": "e7e798bd6402593b5606fb3c409831c345b4bbe7d9a1c16bcb6862323345672c",
+        "index.js": "a9c6cb559621ed90d32b13faf7a9833fa060e8425f2260ae2c4e018cf82a9d5b"
+      }
+    },
+    "opencode": {
+      "version": "1.0.0",
+      "minApp": "1.2.0",
+      "providers": [
+        "opencode",
+        "opencode-go"
+      ],
+      "path": "providers/opencode",
+      "files": {
+        "manifest.json": "ec863c9c4724aeaaa3437d4742112412480095408dcd1addc374380777133564",
+        "index.js": "43e0a7ce41c5d100c34551c97afd26c35796fdbebfb4e91e5ee05cde4cfcaedc"
+      }
+    }
+  }
+}

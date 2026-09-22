@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "id": "opencode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "minApp": "1.2.0",
+  "providers": [
+    {
+      "id": "opencode",
+      "name": "OpenCode Zen",
+      "description": "Pay-as-you-go access to all top coding models",
+      "docsUrl": "https://opencode.ai/zen",
+      "defaults": { "model": "claude-sonnet-4-6", "summarizerModel": "claude-haiku-4-5" },
+      "capabilities": { "vision": true, "tools": true },
+      "modelsDev": "opencode",
+      "envApiKey": "OPENCODE_API_KEY",
+      "usageConsoleUrl": "https://opencode.ai/auth",
+      "auth": [{ "kind": "api-key", "placeholder": "sk-..." }]
+    },
+    {
+      "id": "opencode-go",
+      "name": "OpenCode Go",
+      "description": "$10/mo subscription for open-source coding models",
+      "docsUrl": "https://opencode.ai/zen",
+      "defaults": { "model": "kimi-k2.6", "summarizerModel": "minimax-m3" },
+      "capabilities": { "vision": true, "tools": true },
+      "modelsDev": "opencode-go",
+      "envApiKey": "OPENCODE_API_KEY",
+      "usageConsoleUrl": "https://opencode.ai/auth",
+      "auth": [{ "kind": "api-key", "placeholder": "sk-..." }]
+    }
+  ]
+}

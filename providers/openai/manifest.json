@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "id": "openai",
+  "version": "1.0.0",
+  "main": "index.js",
+  "minApp": "1.2.0",
+  "providers": [
+    {
+      "id": "openai",
+      "name": "OpenAI",
+      "description": "GPT-5, o3, o4, and more",
+      "docsUrl": "https://platform.openai.com/api-keys",
+      "defaults": { "model": "gpt-5.2", "summarizerModel": "gpt-5-mini" },
+      "capabilities": { "vision": true, "tools": true },
+      "modelsDev": "openai",
+      "envApiKey": "OPENAI_API_KEY",
+      "usageConsoleUrl": "https://platform.openai.com/usage",
+      "auth": [
+        {
+          "kind": "oauth-browser",
+          "title": "OpenAI Codex Login",
+          "description": "Login with your ChatGPT Pro or Plus subscription (free access to Codex models)",
+          "loginLabel": "Login with ChatGPT Pro/Plus",
+          "connectedLabel": "Logged in with ChatGPT"
+        },
+        { "kind": "api-key", "placeholder": "sk-..." }
+      ]
+    }
+  ]
+}

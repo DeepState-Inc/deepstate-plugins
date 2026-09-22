@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "id": "claude",
+  "version": "1.0.0",
+  "main": "index.js",
+  "minApp": "1.2.0",
+  "providers": [
+    {
+      "id": "claude",
+      "name": "Claude (Anthropic)",
+      "description": "Claude 4.5 Sonnet, Opus, and Haiku",
+      "docsUrl": "https://console.anthropic.com/",
+      "defaults": { "model": "claude-sonnet-4-5-20250929", "summarizerModel": "claude-haiku-4-5-20251001" },
+      "capabilities": { "vision": true, "tools": true },
+      "modelsDev": "anthropic",
+      "envApiKey": "ANTHROPIC_API_KEY",
+      "usageConsoleUrl": "https://console.anthropic.com/settings/usage",
+      "auth": [
+        {
+          "kind": "oauth-code",
+          "title": "Claude Pro/Max Login",
+          "description": "Login with your Claude Pro or Max subscription (no API key needed)",
+          "loginLabel": "Login with Claude Pro/Max",
+          "instructions": "After authorizing in your browser, copy the code shown and paste it here.",
+          "connectedLabel": "Logged in with Claude"
+        },
+        { "kind": "api-key", "placeholder": "sk-ant-..." }
+      ]
+    }
+  ]
+}

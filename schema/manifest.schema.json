@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/krruzic/deepstate-plugins/schema/manifest.schema.json",
+  "title": "DeepState provider plugin manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "version", "main", "minApp", "providers"],
+  "properties": {
+    "schema": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "main": { "const": "index.js" },
+    "minApp": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "providers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/provider" }
+    }
+  },
+  "$defs": {
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "description", "docsUrl", "defaults", "capabilities", "auth"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "docsUrl": { "type": "string", "format": "uri" },
+        "defaults": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["model", "summarizerModel"],
+          "properties": {
+            "model": { "type": "string", "minLength": 1 },
+            "summarizerModel": { "type": "string", "minLength": 1 }
+          }
+        },
+        "capabilities": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["vision", "tools"],
+          "properties": { "vision": { "type": "boolean" }, "tools": { "type": "boolean" } }
+        },
+        "auth": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "placeholder"],
+                "properties": {
+                  "kind": { "const": "api-key" },
+                  "placeholder": { "type": "string" }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "title", "description", "loginLabel", "instructions", "connectedLabel"],
+                "properties": {
+                  "kind": { "const": "oauth-code" },
+                  "title": { "type": "string" },
+                  "description": { "type": "string" },
+                  "loginLabel": { "type": "string" },
+                  "instructions": { "type": "string" },
+                  "connectedLabel": { "type": "string" }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["kind", "title", "description", "loginLabel", "connectedLabel"],
+                "properties": {
+                  "kind": { "const": "oauth-browser" },
+                  "title": { "type": "string" },
+                  "description": { "type": "string" },
+                  "loginLabel": { "type": "string" },
+                  "connectedLabel": { "type": "string" }
+                }
+              }
+            ]
+          }
+        },
+        "modelsDev": { "type": "string" },
+        "envApiKey": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]*$" },
+        "usageConsoleUrl": { "type": "string", "format": "uri" }
+      }
+    }
+  }
+}
