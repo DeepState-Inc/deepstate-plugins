@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-22T18:20:20.038Z",
+  "generatedAt": "2026-09-22T20:18:30.582Z",
   "plugins": {
     "claude": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "minApp": "1.2.0",
       "providers": [
         "claude"
       ],
       "path": "providers/claude",
       "files": {
-        "manifest.json": "7535f5fcfeb01782cc9cc1c5afd2ddcf53337977f1495bc7a79f78b39f28ed5b",
-        "index.js": "aec55b71bbc5bd8616628590f1e02aa459400356e9741f63ca4386d7152877f4"
+        "manifest.json": "6dacf11d0597a26c317addfeaccb73c057eb6a7e4c03534837f522658fe0947c",
+        "index.js": "ef8056301a386d2f0f8f371b07dacfe95c140fc0d1f121231a09ffaf9a973290"
       }
     },
     "openai": {

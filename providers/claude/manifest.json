@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "id": "claude",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "minApp": "1.2.0",
   "providers": [

@@ -21,7 +21,7 @@ module.exports = function createProvider(host) {
   // ── Constants ──────────────────────────────────────────────────────
 
   const CLIENT_ID = '9d1c250a-e61b-44d9-88ed-5944d1962f5e'
-  const CLI_VERSION = '2.1.251'
+  const CLI_VERSION = '2.1.280'
   const CLI_PREFIX = "You are Claude Code, Anthropic's official CLI for Claude."
 
   const AUTH_URL = 'https://claude.com/cai/oauth/authorize'
