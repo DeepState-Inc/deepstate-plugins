@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/krruzic/deepstate-plugins/schema/manifest.schema.json",
+  "$id": "https://github.com/DeepState-Inc/deepstate-plugins/schema/manifest.schema.json",
   "title": "DeepState provider plugin manifest",
   "type": "object",
   "additionalProperties": false,
